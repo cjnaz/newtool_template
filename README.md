@@ -1,4 +1,8 @@
-# newtool - Monitoring the health of the WAN connection
+# newtool - tag line
+
+This repo is a shell / template/ set of start files for a new tool using the cjnfuncs freamework.
+
+README placeholder text follows
 
 Monitors WAN-side internet access and WAN IP address changes on a home network.  Sends email and/or text notifications for internet outages (after restored) and WAN IP changes.  The tool is highly configurable for which modem and router you may be using.  Configurations for dd-wrt and pfSense routers, and Motorola and Technicolor/Cox gateway modems are included.
 
