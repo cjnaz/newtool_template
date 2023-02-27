@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools"] #, "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = 'cjnnewtool'  #"newtoolname"
+version = "0.1a1"
+description = "one liner"
+readme = "README.md"
+requires-python = ">=3.6"       # Centos 7 uses 3.6.8
+authors = [ {name = "Chris Nelson", email = "github@cjnaz.com"} ]
+license = {file = "LICENSE.txt"}
+dependencies = [
+    'cjnfuncs >= 2.0.1',
+    'importlib-metadata; python_version<"3.8"',
+    ]
+classifiers = [                 # https://pypi.org/classifiers/
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Networking :: Monitoring",
+    ]
+
+
+[project.scripts]
+newtoolcli = "cjnnewtool.newtoolX:cli"
+
+
+[project.urls]
+repository = "https://github.com/cjnaz/tool_template"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["deployment_files/*"]
